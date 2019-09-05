@@ -33,7 +33,7 @@ public class WeatherApplication {
 	@Transactional
 	public void onPostConstruct() {
 		logger.debug("Update DB Scheme");
-		//создаем БД если не создана
+		//создаем БД если не создана.
 		jdbcTemplate.update("CREATE TABLE IF NOT EXISTS weathers (weather text);");
 		logger.debug("Updated successfully");
 	}
